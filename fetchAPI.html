@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const URL = "https://api.github.com/users/xiaotian/repos";
+
+      // using fetch
+      // fetch(URL)
+      //     .then(response=>{
+      //         if(response.ok){
+      //             return response.json(); // by  default will return anyways
+      //         }
+      //         else{
+      //             throw new Error("Something Went wrong")
+      //         }
+      //     })
+      //     .then(data=>{
+      //         console.log(data)
+      //     })
+      // .catch(error=>{
+      //     console.log("Inside catch");
+      //     console.log(error);
+      // })
+
+      // using async await
+        console.log("script start")
+      const URL1 = "https://api.github.com/users/xiaotian/repos";
+
+      async function getPosts() {
+        const response = await fetch(URL1);
+        if (!response.ok) {
+            throw new Error(" Something Went Wrong")
+        }
+        const data = await response.json();
+        // console.log(data) // can print
+        return data; // promise
+      }
+
+      // const mydata = getPosts();
+      // console.log(mydata)
+      getPosts()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log("Inside catch");
+          console.log(error);
+        });
+        console.log("script end")
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#container{
+    overflow-x: hidden;
+    background-color: blanchedalmond;
+    border: 4px solid black;
+    height: auto;
+    width: 95%;
+    padding: 2%;
+    border-radius: 10px;
+}
+.child{
+    background-color: lightblue;
+    font-size: large;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 2%;
+    border: 3px solid red;
+    gap: 1%;
+    width: 95%;
+}
+button{
+    
+    width: 10%;
+    height: 6%;
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 800;
+}
+#pop{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    background-color: aqua;
+    border-radius: 20px;
+    border: 2px solid blue;
+    padding: 20px;
+    height: 200px;
+    width: 400px;
+}
+input{
+    border: 2px solid black;
+    margin: 5px;
+}
+.popbtn{
+    border: 2 px solid black;
+    height: 30px;
+    width: 100px;
+    font-size: large;
+    font-weight: bold;
+}
